@@ -187,6 +187,50 @@
     .grid6 { grid-template-columns: 1fr; }
   }
 
+  /* ---------- CATEGORY GROUPS (liste complete) ---------- */
+  .cat-groups {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    overflow: hidden;
+  }
+  .cat {
+    background: var(--navy);
+    padding: 32px 30px;
+  }
+  .cat .cat-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--sky);
+    margin-bottom: 20px;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .cat ul { list-style: none; }
+  .cat li {
+    padding: 12px 0;
+    border-top: 1px solid var(--line);
+  }
+  .cat li:first-of-type { border-top: none; padding-top: 0; }
+  .cat li strong {
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .cat li span {
+    font-size: 13.5px;
+    color: var(--slate);
+    line-height: 1.5;
+  }
+  @media (max-width: 780px) {
+    .cat-groups { grid-template-columns: 1fr; }
+  }
+
   /* ---------- COMPAT STRIP ---------- */
   .strip {
     display: flex;
@@ -268,7 +312,7 @@
 </section>
 
 <div class="wrap">
-  <div class="ruler">DIX-HUIT OUTILS · UN SEUL PLUGIN</div>
+  <div class="ruler">UNE BOITE A OUTILS COMPLETE POUR REVIT</div>
 </div>
 
 <section id="outils">
@@ -277,38 +321,42 @@
       <h2>Une boite a outils complete</h2>
       <p>Pense pour eviter de jongler entre plusieurs plugins separes — de l'audit du modele jusqu'a l'export des metres.</p>
     </div>
-    <div class="grid6">
-      <div class="cap">
-        <span class="num">01</span>
-        <h3>Classification IFC</h3>
-        <p>Analyse et corrige automatiquement la classe IFC et les proprietes de chaque element du projet.</p>
+    <div class="cat-groups">
+      <div class="cat">
+        <span class="cat-label">IFC &amp; conformite</span>
+        <ul>
+          <li><strong>Classification IFC</strong><span>Analyse et corrige automatiquement la classe IFC de chaque element du projet.</span></li>
+          <li><strong>Verif. Property Sets IFC</strong><span>Verifie que les proprietes IFC courantes sont bien remplies, au-dela de la classe seule.</span></li>
+          <li><strong>Inserer Property Set</strong><span>Cree de vrais parametres Revit a partir d'un fichier Excel de proprietes.</span></li>
+        </ul>
       </div>
-      <div class="cap">
-        <span class="num">02</span>
-        <h3>Detecteur de clash</h3>
-        <p>Repere les collisions geometriques entre deux groupes de categories, avec export BCF a l'appui.</p>
+      <div class="cat">
+        <span class="cat-label">Controle qualite</span>
+        <ul>
+          <li><strong>Detecteur de clash</strong><span>Repere les collisions geometriques entre deux groupes de categories, export BCF a l'appui.</span></li>
+          <li><strong>Detecteur de doublons</strong><span>Trouve les elements dupliques par erreur, sans rien supprimer automatiquement.</span></li>
+          <li><strong>Model Checker</strong><span>Audit global : avertissements Revit, elements egares, niveaux inutilises.</span></li>
+        </ul>
       </div>
-      <div class="cap">
-        <span class="num">03</span>
-        <h3>Model Checker</h3>
-        <p>Audit global : avertissements Revit non resolus, elements egares, niveaux inutilises.</p>
+      <div class="cat">
+        <span class="cat-label">Donnees &amp; Excel</span>
+        <ul>
+          <li><strong>Export / Reimporter parametres</strong><span>Edite en masse les parametres de tes elements via Excel.</span></li>
+          <li><strong>Export / Reimporter nomenclature</strong><span>Meme principe pour une nomenclature complete.</span></li>
+          <li><strong>Parameter Manager</strong><span>Audite, renomme en masse, ou copie des valeurs entre parametres.</span></li>
+          <li><strong>Quantity Manager</strong><span>Extrait les quantites par categorie (nombre, surface, volume, longueur) vers Excel.</span></li>
+        </ul>
       </div>
-      <div class="cap">
-        <span class="num">04</span>
-        <h3>Quantity Manager</h3>
-        <p>Extrait les quantites par categorie (nombre, surface, volume, longueur) vers Excel.</p>
-      </div>
-      <div class="cap">
-        <span class="num">05</span>
-        <h3>Parameter Manager</h3>
-        <p>Audite, renomme en masse, ou copie des valeurs entre parametres, sans repasser element par element.</p>
-      </div>
-      <div class="cap">
-        <span class="num">06</span>
-        <h3>Nuage de points → Terrain</h3>
-        <p>Detecte automatiquement le sol dans un scan 3D et cree la topographie correspondante.</p>
+      <div class="cat">
+        <span class="cat-label">Collaboration &amp; terrain</span>
+        <ul>
+          <li><strong>BCF Manager</strong><span>Ouvre ou cree des rapports de problemes BCF, avec zoom direct sur chaque point.</span></li>
+          <li><strong>Projets ouverts</strong><span>Colore les onglets de tes projets Revit ouverts simultanement.</span></li>
+          <li><strong>Nuage de points → Terrain</strong><span>Detecte le sol dans un scan 3D et cree la topographie correspondante.</span></li>
+        </ul>
       </div>
     </div>
+    <p style="margin-top:28px; font-size:14px; color:var(--slate);">+ gestion de licence integree et aide contextuelle directement dans le plugin.</p>
   </div>
 </section>
 
