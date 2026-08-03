@@ -216,6 +216,9 @@
     border-top: 1px solid var(--line);
   }
   .cat li:first-of-type { border-top: none; padding-top: 0; }
+  .cat li a { display: block; text-decoration: none; border-radius: 6px; transition: background 0.15s ease; margin: -6px -8px; padding: 6px 8px; }
+  .cat li a:hover { background: rgba(60,165,255,0.07); }
+  .cat li a:hover strong { color: var(--sky); }
   .cat li strong {
     display: block;
     font-size: 15px;
@@ -325,34 +328,34 @@
       <div class="cat">
         <span class="cat-label">IFC &amp; conformite</span>
         <ul>
-          <li><strong>Classification IFC</strong><span>Analyse et corrige automatiquement la classe IFC de chaque element du projet.</span></li>
-          <li><strong>Verif. Property Sets IFC</strong><span>Verifie que les proprietes IFC courantes sont bien remplies, au-dela de la classe seule.</span></li>
-          <li><strong>Inserer Property Set</strong><span>Cree de vrais parametres Revit a partir d'un fichier Excel de proprietes.</span></li>
+          <li><a href="outils/classification-ifc.html"><strong>Classification IFC</strong><span>Analyse et corrige automatiquement la classe IFC de chaque element du projet.</span></a></li>
+          <li><a href="outils/property-sets-ifc.html"><strong>Verif. Property Sets IFC</strong><span>Verifie que les proprietes IFC courantes sont bien remplies, au-dela de la classe seule.</span></a></li>
+          <li><a href="outils/inserer-property-set.html"><strong>Inserer Property Set</strong><span>Cree de vrais parametres Revit a partir d'un fichier Excel de proprietes.</span></a></li>
         </ul>
       </div>
       <div class="cat">
         <span class="cat-label">Controle qualite</span>
         <ul>
-          <li><strong>Detecteur de clash</strong><span>Repere les collisions geometriques entre deux groupes de categories, export BCF a l'appui.</span></li>
-          <li><strong>Detecteur de doublons</strong><span>Trouve les elements dupliques par erreur, sans rien supprimer automatiquement.</span></li>
-          <li><strong>Model Checker</strong><span>Audit global : avertissements Revit, elements egares, niveaux inutilises.</span></li>
+          <li><a href="outils/detecteur-clash.html"><strong>Detecteur de clash</strong><span>Repere les collisions geometriques entre deux groupes de categories, export BCF a l'appui.</span></a></li>
+          <li><a href="outils/detecteur-doublons.html"><strong>Detecteur de doublons</strong><span>Trouve les elements dupliques par erreur, sans rien supprimer automatiquement.</span></a></li>
+          <li><a href="outils/model-checker.html"><strong>Model Checker</strong><span>Audit global : avertissements Revit, elements egares, niveaux inutilises.</span></a></li>
         </ul>
       </div>
       <div class="cat">
         <span class="cat-label">Donnees &amp; Excel</span>
         <ul>
-          <li><strong>Export / Reimporter parametres</strong><span>Edite en masse les parametres de tes elements via Excel.</span></li>
-          <li><strong>Export / Reimporter nomenclature</strong><span>Meme principe pour une nomenclature complete.</span></li>
-          <li><strong>Parameter Manager</strong><span>Audite, renomme en masse, ou copie des valeurs entre parametres.</span></li>
-          <li><strong>Quantity Manager</strong><span>Extrait les quantites par categorie (nombre, surface, volume, longueur) vers Excel.</span></li>
+          <li><a href="outils/export-parametres.html"><strong>Export / Reimporter parametres</strong><span>Edite en masse les parametres de tes elements via Excel.</span></a></li>
+          <li><a href="outils/export-nomenclature.html"><strong>Export / Reimporter nomenclature</strong><span>Meme principe pour une nomenclature complete.</span></a></li>
+          <li><a href="outils/parameter-manager.html"><strong>Parameter Manager</strong><span>Audite, renomme en masse, ou copie des valeurs entre parametres.</span></a></li>
+          <li><a href="outils/quantity-manager.html"><strong>Quantity Manager</strong><span>Extrait les quantites par categorie (nombre, surface, volume, longueur) vers Excel.</span></a></li>
         </ul>
       </div>
       <div class="cat">
         <span class="cat-label">Collaboration &amp; terrain</span>
         <ul>
-          <li><strong>BCF Manager</strong><span>Ouvre ou cree des rapports de problemes BCF, avec zoom direct sur chaque point.</span></li>
-          <li><strong>Projets ouverts</strong><span>Colore les onglets de tes projets Revit ouverts simultanement.</span></li>
-          <li><strong>Nuage de points → Terrain</strong><span>Detecte le sol dans un scan 3D et cree la topographie correspondante.</span></li>
+          <li><a href="outils/bcf-manager.html"><strong>BCF Manager</strong><span>Ouvre ou cree des rapports de problemes BCF, avec zoom direct sur chaque point.</span></a></li>
+          <li><a href="outils/projets-ouverts.html"><strong>Projets ouverts</strong><span>Colore les onglets de tes projets Revit ouverts simultanement.</span></a></li>
+          <li><a href="outils/nuage-points-terrain.html"><strong>Nuage de points → Terrain</strong><span>Detecte le sol dans un scan 3D et cree la topographie correspondante.</span></a></li>
         </ul>
       </div>
     </div>
